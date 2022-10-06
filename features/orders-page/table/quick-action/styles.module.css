@@ -1,0 +1,10 @@
+.quickAction {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}

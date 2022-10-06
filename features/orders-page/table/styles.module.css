@@ -1,0 +1,55 @@
+@import '@vtblife/uikit/dist/css/mixins/ds-breakpoint.css';
+
+.wrapper {
+    padding: var(--padding-xs) var(--padding-l);
+    @mixin screen-m-and-lesser {
+        display: none;
+    }
+}
+
+.wrapperCard {
+    padding: var(--padding-s) var(--padding-l);
+    border: 1px solid #eae9f2;
+    border-radius: var(--s-unit-05x);
+    margin-bottom: var(--padding-l);
+    cursor: pointer;
+}
+
+.title {
+    font: var(--t-primary);
+    color: var(--color-black-300);
+}
+
+.card {
+    font: var(--t-secondary);
+}
+
+.name > div {
+    font-weight: 500;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-column-gap: var(--padding-xl);
+    grid-template-columns: 4fr 1.5fr 1.3fr 1.3fr minmax(166px, 1.3fr);
+}
+
+/* Плохо конечно завязываться на внутреннюю структуру компонента, но Paper не */
+/* предполагает внешней стилизации */
+.paper > div {
+    padding: 0;
+}
+.paper > div > div {
+    margin-bottom: 0;
+}
+.paper {
+    margin-bottom: var(--padding-xs);
+}
+
+.badges {
+    min-width: 166px;
+    display: flex;
+    align-items: center;
+    gap: var(--padding-xs);
+}
